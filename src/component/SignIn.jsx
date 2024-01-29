@@ -1,5 +1,6 @@
 import React from "react";
-import logo from './assets/img/argentBankLogo.png'
+import logo from '../assets/img/argentBankLogo.png'
+import { Footer } from './Footer';
 import { Link } from "react-router-dom";
 
 export const SignIn = () => {
@@ -45,9 +46,8 @@ export const SignIn = () => {
         </form>
       </section>
     </main>
-    <footer className="footer">
-      <p className="footer-text">Copyright 2020 Argent Bank</p>
-    </footer>
+    <Footer />
+
   </>);
 };
 

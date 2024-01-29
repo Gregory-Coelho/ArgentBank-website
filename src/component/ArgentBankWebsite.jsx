@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from './assets/img/argentBankLogo.png'
-import iconChat from './assets/img/icon-chat.png'
-import iconSecurity from './assets/img/icon-security.png'
-import iconMoney from './assets/img/icon-money.png'
-import './assets/css/main.css';
+import logo from '../assets/img/argentBankLogo.png'
+import iconChat from '../assets/img/icon-chat.png'
+import iconSecurity from '../assets/img/icon-security.png'
+import iconMoney from '../assets/img/icon-money.png'
+import { Footer } from './Footer';
+import '../assets/css/main.css';
 import { Link } from 'react-router-dom';
 
 export const ArgentBankWebsite = () => {
@@ -70,9 +71,7 @@ export const ArgentBankWebsite = () => {
           </div>
         </section>
       </main>
-      <footer className="footer">
-        <p className="footer-text">Copyright 2020 Argent Bank</p>
-      </footer>
+      <Footer />
     </>
   );
 };

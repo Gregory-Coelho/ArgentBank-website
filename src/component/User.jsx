@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from './assets/img/argentBankLogo.png'
-import './assets/css/main.css';
+import logo from '../assets/img/argentBankLogo.png'
+import '../assets/css/main.css';
 import { Link } from "react-router-dom";
+import { Footer } from './Footer';
 
 export const User = () => {
   return (
@@ -63,9 +64,7 @@ export const User = () => {
           </div>
         </section>
       </main>
-      <footer className="footer">
-        <p className="footer-text">Copyright 2020 Argent Bank</p>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,6 @@
-import { ArgentBankWebsite } from "../src/ArgentBankWebsite";
-import { User } from "../src/User";
-import { SignIn } from "../src/SignIn";
+import { ArgentBankWebsite } from "../src/component/ArgentBankWebsite";
+import { User } from "../src/component/User";
+import { SignIn } from "../src/component/SignIn";
 import { Routes, Route } from "react-router-dom";
 
 export const App = () => {
