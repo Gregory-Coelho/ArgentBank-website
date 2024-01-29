@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './designs/img/argentBankLogo.png'
-import './designs/css/main.css';
+import logo from './assets/img/argentBankLogo.png'
+import './assets/css/main.css';
 import { Link } from "react-router-dom";
 
 export const User = () => {
