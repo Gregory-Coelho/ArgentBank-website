@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Argent Bank - Home Page</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
+import React from "react";
+
+export const SignIn = () => {
+  return (<>
     <nav class="main-nav">
       <a class="main-nav-logo" href="./index.html">
         <img
@@ -33,30 +24,26 @@
         <h1>Sign In</h1>
         <form>
           <div class="input-wrapper">
-            <label for="username">Username</label
-            ><input type="text" id="username" />
+            <label for="username">Username</label>
+            <input type="text" id="username" />
           </div>
           <div class="input-wrapper">
-            <label for="password">Password</label
-            ><input type="password" id="password" />
+            <label for="password">Password</label>
+            <input type="password" id="password" />
           </div>
           <div class="input-remember">
-            <input type="checkbox" id="remember-me" /><label for="remember-me"
-              >Remember me</label
-            >
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me</label>
           </div>
-          <!-- PLACEHOLDER DUE TO STATIC SITE -->
+          {/* PLACEHOLDER DUE TO STATIC SITE */}
           <a href="./user.html" class="sign-in-button">Sign In</a>
-          <!-- SHOULD BE THE BUTTON BELOW -->
-          <!-- <button class="sign-in-button">Sign In</button> -->
-          <!--  -->
+          <button class="sign-in-button">Sign In</button>
         </form>
       </section>
     </main>
     <footer class="footer">
       <p class="footer-text">Copyright 2020 Argent Bank</p>
     </footer>
+  </>);
+};
 
-    <script></script>
-  </body>
-</html>
