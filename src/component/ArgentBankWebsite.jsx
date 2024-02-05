@@ -1,31 +1,15 @@
 import React from 'react';
-import logo from '../assets/img/argentBankLogo.png'
 import iconChat from '../assets/img/icon-chat.png'
 import iconSecurity from '../assets/img/icon-security.png'
 import iconMoney from '../assets/img/icon-money.png'
 import { Footer } from './Footer';
 import '../assets/css/main.css';
-import { Link } from 'react-router-dom';
+import { NavBar } from './NavBar';
 
 export const ArgentBankWebsite = () => {
   return (
     <>
-      <nav className="main-nav">
-        <Link className="main-nav-logo" to='/' >
-          <img
-            className="main-nav-logo-image"
-            src={logo}
-            alt="Argent Bank Logo"
-          />
-          <h1 className="sr-only">Argent Bank</h1>
-        </Link>
-        <div>
-          <Link className="main-nav-item" to='/sign-in' >
-            <i className="fa fa-user-circle"></i>
-            Sign In
-          </Link>
-        </div>
-      </nav>
+      <NavBar sign={true} />
       <main>
         <div className="hero">
           <section className="hero-content">
