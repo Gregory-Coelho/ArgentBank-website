@@ -6,7 +6,7 @@ import { Footer } from './Footer';
 import '../assets/css/main.css';
 import { NavBar } from './NavBar';
 
-export const ArgentBankWebsite = () => {
+export const Home = () => {
   return (
     <>
       <NavBar sign={true} />
