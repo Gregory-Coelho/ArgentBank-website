@@ -28,6 +28,9 @@ mongo --version
 1. Open a terminal window in the cloned project
 1. Run the following commands:
 
+start serv community : brew services start mongodb-community
+stop serv community :brew services start mongodb-community
+
 ```bash
 # Install dependencies
 npm install
