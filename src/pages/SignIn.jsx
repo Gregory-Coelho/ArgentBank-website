@@ -1,7 +1,7 @@
 import React from "react";
-import { Footer } from './Footer';
+import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-import { NavBar } from './NavBar';
+import { NavBar } from "../components/NavBar";
 
 export const SignIn = () => {
   return (<>

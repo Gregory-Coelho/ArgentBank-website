@@ -1,6 +1,7 @@
-import { Home } from "../src/component/Home";
-import { User } from "../src/component/User";
-import { SignIn } from "../src/component/SignIn";
+import { Home } from "../src/pages/Home";
+import { User } from "../src/pages/User";
+import { SignIn } from "../src/pages/SignIn";
+import { Error } from "../src/pages/Error";
 import { Routes, Route } from "react-router-dom";
 
 export const App = () => {
@@ -10,6 +11,7 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<User />} />
         <Route path="/sign-in" element={<SignIn />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );

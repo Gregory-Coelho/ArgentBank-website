@@ -2,9 +2,11 @@ import React from 'react';
 import iconChat from '../assets/img/icon-chat.png'
 import iconSecurity from '../assets/img/icon-security.png'
 import iconMoney from '../assets/img/icon-money.png'
-import { Footer } from './Footer';
+import { Footer } from "../components/Footer";
+import { NavBar } from "../components/NavBar";
+
 import '../assets/css/main.css';
-import { NavBar } from './NavBar';
+
 
 export const Home = () => {
   return (
