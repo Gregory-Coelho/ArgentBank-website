@@ -29,7 +29,7 @@ mongo --version
 1. Run the following commands:
 
 start serv community : brew services start mongodb-community
-stop serv community :brew services start mongodb-community
+stop serv community :brew services stop mongodb-community
 
 ```bash
 # Install dependencies
