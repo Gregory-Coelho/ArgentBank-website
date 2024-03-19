@@ -1,9 +1,8 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store.tsx";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import React from "react";
 import { getUser, toggleEditing } from "../../store/userStore.tsx";
+import React from "react";
 import { Button } from "../../components/Button.tsx";
 import { Account } from "../../components/Account.tsx";
 import { EditForm } from "../../components/EditForm.tsx";
@@ -14,15 +13,11 @@ export const Profile = () => {
   const token = useSelector((state: RootState) => state.auth.token);
   const user = useSelector((state: RootState) => state.user.user);
 
-  if (token === null) {
-    window.location.href = "/login";
-  }
-
   useEffect(() => {
-    if (token) {
-      dispatch(getUser(token));
+    if (!token) {
+      dispatch({ type: "NAVIGATE_TO_LOGIN" }); // Dispatch une action pour naviguer vers la page de connexion
     } else {
-      window.location.href = "/login";
+      dispatch(getUser(token));
     }
   }, [dispatch, token]);
 
@@ -35,7 +30,7 @@ export const Profile = () => {
           ) : (
             <h1>
               Welcome back
-              <br></br>
+              <br />
               {user.firstName} {user.lastName}!
             </h1>
           ))}

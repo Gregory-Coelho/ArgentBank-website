@@ -7,15 +7,19 @@ import { loginUser } from "../../store/authStore.tsx";
 export const Login = () => {
   const dispatch: AppDispatch = useDispatch();
 
+  // Définition des états pour l'email, le mot de passe et le bouton "Remember Me"
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
 
+  // Fonction de soumission du formulaire de connexion
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    // Dispatch de l'action loginUser avec les informations d'identification
     dispatch(loginUser({ email, password, rememberMe }));
   };
 
+  // Fonction pour gérer le changement d'état de la case à cocher "Remember Me"
   const handleRememberMeChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
