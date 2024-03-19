@@ -1,7 +1,7 @@
-import { Home } from "../src/pages/Home";
-import { User } from "../src/pages/User";
-import { SignIn } from "../src/pages/SignIn";
-import { Error } from "../src/pages/Error";
+import { Home } from "../src/pages/Home.tsx";
+import { User } from "../src/pages/User.tsx";
+import { SignIn } from "../src/pages/SignIn.tsx";
+import { Error } from "../src/pages/Error.tsx";
 import { Routes, Route } from "react-router-dom";
 
 export const App = () => {
