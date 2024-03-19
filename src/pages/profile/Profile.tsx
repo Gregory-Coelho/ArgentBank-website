@@ -3,10 +3,10 @@ import { AppDispatch, RootState } from "../../store/store";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import React from "react";
-import { getUser, toggleEditing } from "../../store/userStore";
-import { Button } from "../../components/Button";
-import { Account } from "../../components/Account";
-import { EditForm } from "../../components/EditForm";
+import { getUser, toggleEditing } from "../../store/userStore.tsx";
+import { Button } from "../../components/Button.tsx";
+import { Account } from "../../components/Account.tsx";
+import { EditForm } from "../../components/EditForm.tsx";
 
 export const Profile = () => {
   const dispatch: AppDispatch = useDispatch();

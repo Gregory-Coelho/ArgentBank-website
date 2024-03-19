@@ -15,7 +15,6 @@ export const Header = () => {
   const { user } = useSelector((state: RootState) => state.user);
   const [isLogged, setIsLogged] = useState(false);
 
-  /* Change l'etat de isLogged si un token d'auth existe  */
   useEffect(() => {
     if (token !== null) {
       setIsLogged(true);
@@ -25,7 +24,6 @@ export const Header = () => {
     }
   }, [navigate, token]);
 
-  /* Deconnecte l'utilisateur et change l'etat de isLogged */
   const SignOut = () => {
     dispatch(logout());
     setIsLogged(false);

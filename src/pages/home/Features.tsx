@@ -1,5 +1,5 @@
 import React from "react";
-import { FeatureItem } from "../../components/FeatureItem";
+import { FeatureItem } from "../../components/FeatureItem.tsx";
 
 export const Features = () => {
   return (

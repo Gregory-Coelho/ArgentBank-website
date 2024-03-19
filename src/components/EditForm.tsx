@@ -2,9 +2,9 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import React from "react";
-import { Button } from "./Button";
+import { Button } from "./Button.tsx";
 import { AppDispatch, RootState } from "../store/store";
-import { putUser } from "../store/userStore";
+import { putUser } from "../store/userStore.tsx";
 
 interface EditFormProps {
   userName: string;

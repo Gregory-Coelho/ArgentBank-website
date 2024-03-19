@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store";
 import React from "react";
-import { loginUser } from "../../store/authStore";
+import { loginUser } from "../../store/authStore.tsx";
 
 export const Login = () => {
   const dispatch: AppDispatch = useDispatch();

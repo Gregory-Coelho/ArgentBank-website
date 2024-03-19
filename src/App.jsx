@@ -1,4 +1,4 @@
-import { Home } from "../src/pages/Home.tsx";
+import { HomePage } from '../src/pages/home/HomePage.tsx'
 // import { User } from "../src/pages/User.tsx";
 import { Login } from "../src/pages/login/Login.tsx";
 import { Profile } from "../src/pages/profile/Profile.tsx";
@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         {/* <Route path="/user/:id" element={<User />} /> */}
         <Route path='profile' element={<Profile />} />
         <Route path="/login" element={<Login />} />
