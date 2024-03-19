@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/img/argentBankLogo.png";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import React from "react";
 import { RootState } from "../store/store";
-import { logout } from "../store/authStore";
-import logo from "../assets/img/argentBankLogo.png";
+import { logout } from "../store/authStore.tsx";
 
 export const Header = () => {
   const dispatch = useDispatch();
