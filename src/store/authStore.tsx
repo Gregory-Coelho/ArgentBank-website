@@ -8,7 +8,6 @@ interface AuthState {
   rememberMe: boolean;
 }
 
-// Définition des types pour les arguments de la fonction asynchrone
 interface LoginArgs {
   email: string;
   password: string;
@@ -19,7 +18,6 @@ interface LoginError {
   message: string;
 }
 
-// LOGIN Création de l'action thunk pour la connexion
 export const loginUser = createAsyncThunk<
   string,
   LoginArgs,
@@ -28,7 +26,7 @@ export const loginUser = createAsyncThunk<
   console.log(rememberMe);
   try {
     const response = await login(email, password);
-    // Enregistrement de la valeur de rememberMe dans le store via l'action setRememberMe
+
     thunkAPI.dispatch(setRememberMe(rememberMe));
     return response.body.token;
   } catch (error) {
@@ -37,10 +35,8 @@ export const loginUser = createAsyncThunk<
   }
 });
 
-// SET REMEMBER ME Création de l'action pour la gestion du bouton "Se souvenir de moi"
 export const setRememberMe = createAction<boolean>("auth/setRememberMe");
 
-// State initial
 const initialState: AuthState = {
   token:
     localStorage.getItem("token") || sessionStorage.getItem("token") || null,
@@ -49,7 +45,6 @@ const initialState: AuthState = {
   rememberMe: false,
 };
 
-// SLICE pour la gestion de l'authentification
 const authStore = createSlice({
   name: "auth",
   initialState,

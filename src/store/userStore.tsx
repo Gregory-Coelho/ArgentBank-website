@@ -16,7 +16,6 @@ interface User {
   lastName: string;
 }
 
-// GET USER Création de l'action thunk pour la récupération des données de l'utilisateur
 export const getUser = createAsyncThunk<
   User,
   string,
@@ -31,7 +30,6 @@ export const getUser = createAsyncThunk<
   }
 });
 
-// PUT USER Création de l'action thunk pour la mise à jour des données de l'utilisateur
 export const putUser = createAsyncThunk<
   User,
   { token: string; user: { firstName: string; lastName: string } },
@@ -46,7 +44,6 @@ export const putUser = createAsyncThunk<
   }
 });
 
-// State initial
 const initialState: UserState = {
   user: null,
   isEditing: false,
