@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../store/store";
+import { AppDispatch, RootState } from "../../store/store.tsx";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import React from "react";

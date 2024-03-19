@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../store/store";
+import { AppDispatch } from "../../store/store.tsx";
 import React from "react";
 import { loginUser } from "../../store/authStore.tsx";
 

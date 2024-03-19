@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import React from "react";
 import { Button } from "./Button.tsx";
-import { AppDispatch, RootState } from "../store/store";
+import { AppDispatch, RootState } from "../store/store.tsx";
 import { putUser } from "../store/userStore.tsx";
 
 interface EditFormProps {

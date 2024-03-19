@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import React from "react";
-import { RootState } from "../store/store";
+import { RootState } from "../store/store.tsx";
 import { logout } from "../store/authStore.tsx";
 
 export const Header = () => {
