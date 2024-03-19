@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import React from "react";
 import { RootState } from "../store/store";
 import { logout } from "../store/authStore";
-import logo from "../assets/image/argentBankLogo.png";
+import logo from "../assets/img/argentBankLogo.png";
 
 export const Header = () => {
   const dispatch = useDispatch();
