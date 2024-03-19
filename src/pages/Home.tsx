@@ -1,12 +1,11 @@
-import React from 'react';
-import iconChat from '../assets/img/icon-chat.png'
-import iconSecurity from '../assets/img/icon-security.png'
-import iconMoney from '../assets/img/icon-money.png'
-import { Footer } from "../components/Footer";
-import { NavBar } from "../components/NavBar";
+import React from "react";
+import iconChat from "../assets/image/icon-chat.png";
+import iconSecurity from "../assets/image/icon-security.png";
+import iconMoney from "../assets/image/icon-money.png";
+import { Footer } from "../components/Footer.tsx";
+import { NavBar } from "../components/NavBar.tsx";
 
-import '../assets/css/main.css';
-
+import "../assets/css/main.css";
 
 export const Home = () => {
   return (
@@ -19,7 +18,9 @@ export const Home = () => {
             <p className="subtitle">No fees.</p>
             <p className="subtitle">No minimum deposit.</p>
             <p className="subtitle">High interest rates.</p>
-            <p className="text">Open a savings account with Argent Bank today!</p>
+            <p className="text">
+              Open a savings account with Argent Bank today!
+            </p>
           </section>
         </div>
         <section className="features">
@@ -33,22 +34,16 @@ export const Home = () => {
             </p>
           </div>
           <div className="feature-item">
-            <img
-              src={iconMoney}
-              alt="Chat Icon"
-              className="feature-icon"
-            />
-            <h3 className="feature-item-title">More savings means higher rates</h3>
+            <img src={iconMoney} alt="Chat Icon" className="feature-icon" />
+            <h3 className="feature-item-title">
+              More savings means higher rates
+            </h3>
             <p>
               The more you save with us, the higher your interest rate will be!
             </p>
           </div>
           <div className="feature-item">
-            <img
-              src={iconSecurity}
-              alt="Chat Icon"
-              className="feature-icon"
-            />
+            <img src={iconSecurity} alt="Chat Icon" className="feature-icon" />
             <h3 className="feature-item-title">Security you can trust</h3>
             <p>
               We use top of the line encryption to make sure your data and money
@@ -61,4 +56,3 @@ export const Home = () => {
     </>
   );
 };
-

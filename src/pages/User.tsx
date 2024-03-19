@@ -1,7 +1,7 @@
-import React from 'react';
-import '../assets/css/main.css';
-import { NavBar } from "../components/NavBar";
-import { Footer } from "../components/Footer";
+import React from "react";
+import "../assets/css/main.css";
+import { NavBar } from "../components/NavBar.tsx";
+import { Footer } from "../components/Footer.tsx";
 
 export const User = () => {
   return (
@@ -9,7 +9,11 @@ export const User = () => {
       <NavBar sign={true} />
       <main className="main bg-dark">
         <div className="header">
-          <h1>Welcome back<br />Tony Jarvis!</h1>
+          <h1>
+            Welcome back
+            <br />
+            Tony Jarvis!
+          </h1>
           <button className="edit-button">Edit Name</button>
         </div>
         <h2 className="sr-only">Accounts</h2>
@@ -46,5 +50,5 @@ export const User = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};

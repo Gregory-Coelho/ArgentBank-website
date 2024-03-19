@@ -1,13 +1,13 @@
 import React from "react";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/Footer.tsx";
 import { Link } from "react-router-dom";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/NavBar.tsx";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../store/store.tsx";
 import { loginUser } from "../store/authStore.tsx";
 
-export const SignIn = () => {
+export const Login = () => {
   const dispatch: AppDispatch = useDispatch();
 
   const [email, setEmail] = useState("");
