@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import React from "react";
 import { getUser, toggleEditing } from "../../store/userStore";
-import { EditForm } from "../../components/EditForm";
 import { Button } from "../../components/Button";
 import { Account } from "../../components/Account";
+import { EditForm } from "../../components/EditForm";
 
 export const Profile = () => {
   const dispatch: AppDispatch = useDispatch();
