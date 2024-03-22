@@ -39,13 +39,18 @@ export const updateUser = async (
   token: string,
   user: { firstName: string; lastName: string }
 ) => {
-  // Envoi d'une requête PUT à l'endpoint "/user/profile" pour mettre à jour les données du profil utilisateur
-  const response = await api.put("/user/profile", user, {
-    // Ajout du jeton d'authentification dans les en-têtes de la requête
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
-  // Renvoi des données de réponse de l'API
-  return response.data;
+  try {
+    // Envoi d'une requête PUT à l'endpoint "/user/profile" pour mettre à jour les données du profil utilisateur
+    const response = await api.put("/user/profile", user, {
+      // Ajout du jeton d'authentification dans les en-têtes de la requête
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    // Renvoi des données de réponse de l'API
+    return response.data;
+  } catch (error) {
+    // Gère les erreurs en renvoyant un objet d'erreur ou en lançant une nouvelle erreur
+    throw new Error("Erreur lors de la mise à jour du profil utilisateur");
+  }
 };

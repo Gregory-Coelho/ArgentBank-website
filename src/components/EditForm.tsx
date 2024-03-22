@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Button } from "./Button.tsx";
 import { AppDispatch, RootState } from "../store/store.tsx";
-import { putUser } from "../store/userStore.tsx";
+import { putUser, toggleEditing } from "../store/userStore.tsx";
 
 // Définition des props attendues pour EditForm
 interface EditFormProps {
@@ -29,12 +29,6 @@ export const EditForm = ({ userName, userFirstName }: EditFormProps) => {
       // Dispatch de l'action pour désactiver le mode édition
       dispatch(toggleEditing());
     }
-  };
-
-  // Fonction pour basculer l'état d'édition
-  const toggleEditing: any = () => {
-    // TODO: Implémenter la fonction de bascule
-    // throw new Error("Function not implemented.");
   };
 
   return (
