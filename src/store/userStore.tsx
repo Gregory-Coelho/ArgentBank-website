@@ -13,6 +13,7 @@ interface UserState {
 interface User {
   firstName: string;
   lastName: string;
+  userName: string;
 }
 
 // Interface pour les erreurs de connexion
@@ -38,7 +39,10 @@ export const getUser = createAsyncThunk<
 // Action asynchrone pour mettre à jour les informations de l'utilisateur
 export const putUser = createAsyncThunk<
   User, // Type de la valeur de retour
-  { token: string; user: { firstName: string; lastName: string } }, // Type des arguments (token et informations utilisateur)
+  {
+    token: string;
+    user: { firstName: string; lastName: string; userName: string };
+  }, // Type des arguments (token et informations utilisateur)
   { rejectValue: LoginError } // Type de la valeur de rejet en cas d'erreur
 >("auth/putUser", async ({ token, user }, thunkAPI) => {
   try {

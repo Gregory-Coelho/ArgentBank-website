@@ -53,7 +53,7 @@ export const Header = () => {
           {/* Lien vers le profil de l'utilisateur */}
           <Link to="/profile" className="main-nav-item">
             <i className="fa fa-user-circle"></i>
-            {user ? user.firstName : "Loading..."}
+            {user ? user.userName : "Loading..."}
           </Link>
           {/* Lien pour se déconnecter */}
           <Link to="/" className="main-nav-item" onClick={handleSignOut}>

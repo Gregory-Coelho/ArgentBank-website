@@ -9,23 +9,33 @@ import { putUser, toggleEditing } from "../store/userStore.tsx";
 interface EditFormProps {
   userName: string;
   userFirstName: string;
+  userLastName: string;
 }
 
 // Composant fonctionnel EditForm
-export const EditForm = ({ userName, userFirstName }: EditFormProps) => {
+export const EditForm = ({
+  userName,
+  userFirstName,
+  userLastName,
+}: EditFormProps) => {
   const dispatch: AppDispatch = useDispatch();
   const token = useSelector((state: RootState) => state.auth.token);
 
   // Utilisation de useState pour gérer les états des champs de formulaire
-  const [firstName, setFirstName] = useState(userFirstName);
-  const [lastName, setLastName] = useState(userName);
+
+  const [user, setUser] = useState(userName);
 
   // Gestion de la soumission du formulaire
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (token) {
       // Dispatch de l'action putUser avec les données mises à jour
-      dispatch(putUser({ token, user: { firstName, lastName } }));
+      dispatch(
+        putUser({
+          token,
+          user: { userName, firstName: userFirstName, lastName: userLastName },
+        })
+      );
       // Dispatch de l'action pour désactiver le mode édition
       dispatch(toggleEditing());
     }
@@ -33,33 +43,35 @@ export const EditForm = ({ userName, userFirstName }: EditFormProps) => {
 
   return (
     <form className="form edit-form" onSubmit={handleSubmit}>
-      <h2>Welcome back</h2>
+      <h2>Edit user info</h2>
       <div className="inputs-form">
         <div className="input-group">
           <div className="input-element">
-            <label className="sr-only" htmlFor="first-name">
-              First Name
-            </label>
+            User name:
             <input
               type="text"
               id="first-name"
               name="first-name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
+              value={user ? user : ""}
+              onChange={(e) => setUser(e.target.value)}
             />
           </div>
           <div className="input-element">
-            <label className="sr-only" htmlFor="last-name">
-              Last Name
-            </label>
+            First Name:
             <input
-              type="text"
+              disabled
+              id="first-name"
+              name="first-name"
+              value={userFirstName}
+            />
+          </div>
+          <div className="input-element">
+            Last Name:
+            <input
+              disabled
               id="last-name"
               name="last-name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              required
+              value={userLastName}
             />
           </div>
         </div>

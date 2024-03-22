@@ -316,19 +316,21 @@ body {
 .inputs-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 30%;
 }
 
 .input-group {
+  flex-direction: column;
   display: flex;
   justify-content: space-between;
-}
-.input-group {
-  width: 100%;
+  align-items: center;
+  width: 300px;
 }
 
 .input-element {
-  width: 100%;
+  display: flex;
+  width: 75%;
   padding: 5px;
   margin: 0.5rem;
 }
@@ -349,7 +351,7 @@ body {
 }
 
 .edit-form-btn {
-  width: 30%;
+  width: 100%;
   padding: 5px;
   /* margin: 0 0.7rem 0 0.8rem; */
   font-size: 1rem;

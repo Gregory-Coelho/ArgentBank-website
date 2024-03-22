@@ -35,10 +35,7 @@ export const get = async (token: string) => {
 };
 
 // Fonction pour mettre à jour les informations de l'utilisateur sur l'API
-export const updateUser = async (
-  token: string,
-  user: { firstName: string; lastName: string }
-) => {
+export const updateUser = async (token: string, user: { userName: string }) => {
   try {
     // Envoi d'une requête PUT à l'endpoint "/user/profile" pour mettre à jour les données du profil utilisateur
     const response = await api.put("/user/profile", user, {

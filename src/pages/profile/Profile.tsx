@@ -26,12 +26,16 @@ export const Profile = () => {
       <div className="header">
         {user &&
           (isEditing ? (
-            <EditForm userName={user.lastName} userFirstName={user.firstName} />
+            <EditForm
+              userName={user.userName}
+              userFirstName={user.firstName}
+              userLastName={user.lastName}
+            />
           ) : (
             <h1>
               Welcome back
               <br />
-              {user.firstName} {user.lastName}!
+              {user.userName}!
             </h1>
           ))}
         {!isEditing && (
