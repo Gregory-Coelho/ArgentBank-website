@@ -35,7 +35,7 @@ export const Profile = () => {
             <h1>
               Welcome back
               <br />
-              {user.userName}!
+              {user.userName ? user.userName : user.firstName}!
             </h1>
           ))}
         {!isEditing && (

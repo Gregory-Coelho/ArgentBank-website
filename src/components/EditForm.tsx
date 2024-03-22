@@ -33,7 +33,11 @@ export const EditForm = ({
       dispatch(
         putUser({
           token,
-          user: { userName, firstName: userFirstName, lastName: userLastName },
+          user: {
+            userName: user,
+            firstName: userFirstName,
+            lastName: userLastName,
+          },
         })
       );
       // Dispatch de l'action pour désactiver le mode édition
@@ -47,7 +51,7 @@ export const EditForm = ({
       <div className="inputs-form">
         <div className="input-group">
           <div className="input-element">
-            User name:
+            <h5> User name:</h5>
             <input
               type="text"
               id="first-name"
@@ -57,7 +61,7 @@ export const EditForm = ({
             />
           </div>
           <div className="input-element">
-            First Name:
+            <h5> First Name:</h5>
             <input
               disabled
               id="first-name"
@@ -66,7 +70,7 @@ export const EditForm = ({
             />
           </div>
           <div className="input-element">
-            Last Name:
+            <h5> Last Name:</h5>
             <input
               disabled
               id="last-name"
