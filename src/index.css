@@ -196,6 +196,12 @@ h5 {
   font-size: 5rem;
 }
 
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin: 0;
+}
+
 .input-remember {
   display: flex;
 }
