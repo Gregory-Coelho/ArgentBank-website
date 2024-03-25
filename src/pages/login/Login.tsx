@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store.tsx";
 import React from "react";
 import { loginUser } from "../../store/authStore.tsx";
-import { getUserProfile } from "../../../server/services/userService.js";
 
 export const Login = () => {
   const dispatch: AppDispatch = useDispatch();
