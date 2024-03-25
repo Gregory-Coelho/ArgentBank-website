@@ -20,7 +20,7 @@ export const Login = () => {
   const fetchUserProfile = async () => {
     try {
       // Dispatch de l'action getUserProfile pour récupérer le profil de l'utilisateur
-      await dispatch(getUserProfile());
+      await dispatch(loginUser({ email, password, rememberMe }));
     } catch (error) {
       // Si une erreur se produit, capturez-la et affichez un message d'erreur approprié
       setErrorMessage("Wrong password or username");

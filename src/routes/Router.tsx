@@ -4,6 +4,7 @@ import { Layout } from "../components/Layout.tsx";
 import { Profile } from "../pages/profile/Profile.tsx";
 import { Login } from "../pages/login/Login.tsx";
 import { HomePage } from "../pages/home/HomePage.tsx";
+import { Error } from "../pages/Error.tsx";
 
 export const Router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ export const Router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "profile", element: <Profile /> },
       { path: "login", element: <Login /> },
+      { path: "*", element: <Error /> },
     ],
   },
 ]);
